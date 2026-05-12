@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] HudManager hudManager;
 
     InputAction jumpAction;
+    [SerializeField] InputActionAsset inputActions;
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +83,16 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        jumpAction = InputSystem.actions.FindAction("Jump");
+        jumpAction = inputActions.FindAction("Jump");
+    }
+
+    private void OnEnable()
+    {
+        jumpAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        jumpAction.Disable();
     }
 }

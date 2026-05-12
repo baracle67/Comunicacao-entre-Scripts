@@ -725,7 +725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 777ae82dd83020742b49353b02500df2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2345ef884faa82a48973c069bfb1e8b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -991,6 +991,7 @@ MonoBehaviour:
   currentLifes: 3
   maxLifes: 3
   hudManager: {fileID: 1333262742}
+  inputActions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
 --- !u!65 &1037827343
 BoxCollider:
   m_ObjectHideFlags: 0
