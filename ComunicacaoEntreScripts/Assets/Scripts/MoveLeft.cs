@@ -6,18 +6,22 @@ public class MoveLeft : MonoBehaviour
 {
     private float speed = 25;
     private float leftBound = -10;
-    private PlayerController playerControllerScript;
+    [SerializeField] PlayerController playerController;
 
+    public void Init(PlayerController script)
+    {
+        playerController = script;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        //playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!playerControllerScript.IsGameOver())
+        if (!PlayerController.isGameOver())
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);    
 
@@ -27,4 +31,6 @@ public class MoveLeft : MonoBehaviour
             }
         }
     }
+
+    
 }
